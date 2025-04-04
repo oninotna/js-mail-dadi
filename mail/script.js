@@ -1,9 +1,14 @@
-const emailNumber = parseInt(prompt("Quante email vuoi inserire alla lista?"));
+let emailNumber = parseInt(prompt("Quante email vuoi inserire alla lista?"));
 const emailList = [];
+
+while (isNaN(emailNumber) || emailNumber <= 0) {
+  alert("Devi inserire un carattere numerico!!");
+  emailNumber = parseInt(prompt("Quante email vuoi inserire alla lista?"));
+}
 
 for (i = 0; i < emailNumber; i++) {
 let newEmail = prompt("Inserisci l'email");
-emailList.push(newEmail);
+emailList.push(newEmail.toLowerCase());
 }
 
 console.table(emailList);
@@ -12,7 +17,7 @@ const userEmail = prompt("Ciao, inserisci la tua email");
 let isUserEmailPresent = false;
 
 for (i = 0; i < emailList.length; i++) {
-  if (userEmail === emailList[i]) {
+  if (userEmail.toLowerCase() === emailList[i]) {
     isUserEmailPresent = true;
   }
 }
