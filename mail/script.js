@@ -18,11 +18,8 @@ for (i = 0; i < emailList.length; i++) {
 }
 
 if (isUserEmailPresent === true) {
-  alert("Bene sei un utente registrato!!");
+  console.log(`Ciao ${userEmail}!! sei un utente registrato!!`);
 }
 else {
-  alert("Purtroppo non sei un utente registrato!!");
+  console.log(`Ciao ${userEmail}!! Purtroppo non sei un utente registrato!!`);
 }
-
-console.log(userEmail);
-console.log(isUserEmailPresent);
