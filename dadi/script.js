@@ -1,70 +1,12 @@
-const teachers = [
-  'Nathan',
-  'Ed',
-  'Fabio',
-  'Phil',
-  'Carlo',
-  'Lewis',
-  'Luca'
-]; // NON MODIFICARE QUESTA VARIABILE
+const pcNumber = Math.floor(Math.random() * 7) + 1;
+const userNumber = Math.floor(Math.random() * 7) + 1;
 
-// 1. Inverti l'ordine degli insegnanti nell'array teachers
-// e salva il risultato nella variabile reversedTeachers
-const reversedTeachers = [];
+console.log(pcNumber);
+console.log(userNumber);
 
-for (let i = teachers.length -1; i >= 0; i--) {
-  reversedTeachers.push(teachers[i]);
+if (pcNumber > userNumber) {
+  alert("Ha vinto il pc")
 }
-
-console.log(reversedTeachers);
-
-// 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
-// con un nome di lunghezza maggiore o uguale a 5 caratteri
-const longNames = [];
-
-for (let i = 0; i < teachers.length; i++) {
-  let longTeacher = teachers[i];
-  if (longTeacher.length >= 5) {
-    longNames.push(longTeacher);
-  }
+else {
+  alert("Ha vinto l'utente")
 }
-
-console.log(longNames);
-
-// 3. Rimuovi 'Ed' dall'array teachers
-teachers.splice(teachers.indexOf('Ed'), 1)
-console.log(teachers);
-
-// 4. Verifica se 'Fabio' è presente nell'array teachers
-// e salva il risultato nella variabile isFabioPresent
-let isFabioPresent = false;
-
-for (let i = 0; i < teachers.length; i++) {
-  if (teachers[i] === "Fabio") {
-    isFabioPresent = true;
-  }
-}
-
-console.log(isFabioPresent);
-
-// const isTeachersEmpty = teachers.length === 0;
-// console.log(isTeachersEmpty);
-
-// 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  
-// separata da virgole e salvala nella variabile teachersString
-const teachersString = teachers.join();
-console.log(teachersString);
-
-let myTeachearString = "";
-
-for (let i = 0; i < teachers.length; i++) {
-  let element = teachers[i];
-  if (i < teachers.length -1) {
-    myTeachearString += `${element}, `
-  }
-  else {
-    myTeachearString += element;
-  }
-}
-
-console.log(myTeachearString);
